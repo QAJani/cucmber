@@ -1,5 +1,10 @@
 Feature: Searching of various categories should be possible along with product search
 
+    It is good to provide an option to our end users where they can search for the products
+    based on their category, rather than only searching a product.This will increase our
+    business and make end users happy.
+
+
     Scenario: Search for the products under Books category
         Given I visit the website as a guest user
         When I select the books option from the dropdown
