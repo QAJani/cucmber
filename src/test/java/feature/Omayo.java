@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 
 public class Omayo {
     WebDriver driver;
-
+    
     @Given("^I navigate to omayo website$")
     public void i_navigate_to_omayo_website() {
         driver = new ChromeDriver();
