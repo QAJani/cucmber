@@ -9,7 +9,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 
-@RunWith(Cucumber.class)
 public class Search {
     @Given("^I visit the website as a guest user$")
     public void i_visit_the_website_as_a_guest_user() {
