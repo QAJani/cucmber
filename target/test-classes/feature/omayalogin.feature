@@ -1,6 +1,6 @@
 
 Feature: Login to the omayo application
-
+    @login
     Scenario Outline: User should only be able to login with valid credentials
         Given I navigate to omayo website
         When I enter correct username as <someusername> and password as <somepassword>

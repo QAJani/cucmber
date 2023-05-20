@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 public class Omayo {
     WebDriver driver;
 
-    @Before
+    @Before("@login")
     public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -56,7 +56,7 @@ public class Omayo {
 
     }
 
-    @After
+    @After("@login")
     public void teardown() {
         driver.quit();
     }
