@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,11 +15,16 @@ import io.cucumber.java.en.When;
 
 public class Omayo {
     WebDriver driver;
-    
-    @Given("^I navigate to omayo website$")
-    public void i_navigate_to_omayo_website() {
+
+    @Before
+    public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+    }
+
+    @Given("^I navigate to omayo website$")
+    public void i_navigate_to_omayo_website() {
+
         driver.get("http://www.omayo.blogspot.com");
     }
 
@@ -46,6 +53,11 @@ public class Omayo {
             actual = "sucess";
         }
         Assert.assertEquals(expected, actual);
+
+    }
+
+    @After
+    public void teardown() {
         driver.quit();
     }
 
